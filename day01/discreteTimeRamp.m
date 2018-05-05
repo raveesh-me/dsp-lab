@@ -73,3 +73,34 @@ for t = -T:T;
   ylabel('amplitude');
 end
 
+%Time shifting on a randomly generated sequence
+T = 10
+x = floor(10*rand(21));
+for t = -T:T;
+  i = t+11
+  subplot(3,3,7);
+  stem(t, x(i));
+  hold on;
+  grid on;
+  title('random selection');
+  xlabel('time in seconds');
+  ylabel('amplitude');
+  
+  %right shift by 5 units x(i-5)
+  subplot(3,3,8);
+  stem(t+5, x(i));
+  hold on;
+  grid on;
+  title('right shift by 5 units');
+  xlabel('time in seconds');
+  ylabel('amplitude');
+  
+  %left shift by 4 units
+  subplot(3,3,9);
+  stem(t-4, x(i));
+  hold on;
+  grid on;
+  title('left shift by 4 units');
+  xlabel('time in seconds');
+  ylabel('amplitude');
+end
