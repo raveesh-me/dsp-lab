@@ -69,4 +69,9 @@ xlabel('frequency');
 ylabel('amplitude');
 
 %DFT of right shift sequence
-subplot(3,3,5)
+subplot(3,3,5);
+N = 8;
+n = 0: N-1;
+k = 0: N-1;
+wn = exp(-j*2*pi/N*n1'*k);
+xk
